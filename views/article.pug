@@ -10,5 +10,5 @@ block content
   if user
     if user.id ==employee.author
       a.btn.btn-default(href='/employees/edit/'+employee._id) Edit 
-      
+      a.btn.btn-danger.delete-employee(href='#',data-id=employee._id) Delete
   

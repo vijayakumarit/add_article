@@ -1,12 +1,12 @@
 $(document).ready(function(){
-  $('.delete-article').on('click', function(e){
+  $('.delete-employee').on('click', function(e){
     $target = $(e.target);
     const id = $target.attr('data-id');
     $.ajax({
       type:'DELETE',
-      url: '/articles/'+id,
+      url: '/employees/'+id,
       success: function(response){
-        alert('Deleting Article');
+        alert('Deleting Employee');
         window.location.href='/';
       },
       error: function(err){
