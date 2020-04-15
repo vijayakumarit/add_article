@@ -4,7 +4,7 @@
   "description": "Simple Website",
   "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
   "author": "Vijayakumar",
   "license": "ISC",
