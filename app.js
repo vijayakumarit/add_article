@@ -104,6 +104,6 @@ app.use('/employees', employees);
 app.use('/users', users);
 
 // Start Server
-app.listen(process.env.PORT || 80, function(){
-  console.log('Server started on port 80...');
+app.listen(3000, function(){
+  console.log('Server started on port 3000...');
 });
