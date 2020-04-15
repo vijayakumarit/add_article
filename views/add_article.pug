@@ -2,12 +2,17 @@ extends layout
 
 block content
   h1 #{title}
-  form(method='POST', action='/articles/add')
+  form(method='POST', action='/employees/add')
     #form-group
-      label Title:
-      input.form-control(name='title', type='text')
+      label Name:
+      input.form-control(name='name', type='text')
     #form-group
-      label Body:
-      textarea.form-control(name='body')
+      label Designation:
+      textarea.form-control(name='designation')
+      
+    #form-group
+      label Salary:
+      input.form-control(name='salary', type='text')
+
     br
     input.btn.btn-primary(type='submit',value='Submit')

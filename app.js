@@ -25,7 +25,7 @@ db.on('error', function(err){
 const app = express();
 
 // Bring in Models
-let Article = require('./models/article');
+let Employee = require('./models/employee');
 
 // Load View Engine
 app.set('views', path.join(__dirname, 'views'));
@@ -85,25 +85,25 @@ app.get('*', function(req, res, next){
 
 // Home Route
 app.get('/', function(req, res){
-  Article.find({}, function(err, articles){
+  Employee.find({}, function(err, employees){
     if(err){
       console.log(err);
     } else {
       res.render('index', {
-        title:'Articles',
-        articles: articles
+        title:'Employee Name List',
+        employees: employees
       });
     }
   });
 });
 
 // Route Files
-let articles = require('./routes/articles');
+let employees = require('./routes/employee');
 let users = require('./routes/users');
-app.use('/articles', articles);
+app.use('/employees', employees);
 app.use('/users', users);
 
 // Start Server
-app.listen(process.env.PORT || 80, function(){
-  console.log('Server started on port 80...');
+app.listen(process.env.PORT || 3000, function(){
+  console.log('Server started on port 3000...');
 });

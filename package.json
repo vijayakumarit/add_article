@@ -1,8 +1,10 @@
 {
-  "name": "nodekb", 
+  "name": "nodekb",
   "version": "1.0.0",
   "description": "Simple Website",
-  "main": "app.js",
+   
+   "start":"nodemon app.js",
+
   "scripts": {
     "start": "node app"
   },
@@ -21,5 +23,8 @@
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "pug": "^2.0.0-rc.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }
